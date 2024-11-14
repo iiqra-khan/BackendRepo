@@ -1,0 +1,3 @@
+nodemon - restarts server (reloadsnindex.js)
+type : model // to use import syntax instead of models
+
