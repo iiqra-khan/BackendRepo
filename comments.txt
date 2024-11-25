@@ -1,3 +1,10 @@
 nodemon - restarts server (reloadsnindex.js)
 type : model // to use import syntax instead of models
 
+read node.js api error
+
+// immediatly invoked function expression(IIFE)
+// is used to deal with global scope pollution ??
+// two iife function written back to back must be separated by a semi colon otherwise it will cause an error
+// below line is right but is not consistent with our code
+// require('dotenv').config({path: './env'})
