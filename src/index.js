@@ -3,7 +3,7 @@ import connectDB from "./db/index.js";
 import {app} from './app.js'
 
 dotenv.config({
-    path: './env'
+    path: './.env'
 })
 
 connectDB() //this returns a promise
@@ -13,7 +13,7 @@ connectDB() //this returns a promise
     })
 })
 .catch((err) => {
-    console.log("MySql DB connection failed !! " , err); 
+    console.log("Mongo DB connection failed !! " , err); 
 })
 
 
