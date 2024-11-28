@@ -62,7 +62,7 @@ userSchema.pre("save", async function (next) { //this is async becoz encryption 
 // methods to check if password is correct when importing user 
 
 userSchema.methods.isPasswordCorrect = async function(password) {
-    await bcrypt.compare(password, this.password) //return true or false
+    return await bcrypt.compare(password, this.password) //return true or false
 }
 
 userSchema.methods.generateAccessToken = function(){
@@ -79,7 +79,7 @@ userSchema.methods.generateAccessToken = function(){
         }
     )
 }
-userSchema.methods.generateRefershToken = function(){
+userSchema.methods.generateRefreshToken = function(){
     return jwt.sign(
         {
             _id: this._id
